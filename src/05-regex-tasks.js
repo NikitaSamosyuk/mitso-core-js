@@ -78,6 +78,7 @@ function getRegexForPitSpot() {
  *   'Pa55'.match(validator) => false
  */
 function getPasswordValidator(minLength) {
+  // пароль обязательно имеет маленькие буквы, большие буквы, цифры, минимальную длину
   return new RegExp(`^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[0-9a-zA-Z]{${minLength},}$`, '');
 }
 
